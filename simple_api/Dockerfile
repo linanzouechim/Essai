@@ -8,3 +8,6 @@ RUN pip3 install -r /requirements.txt
 VOLUME ["/data"]
 EXPOSE 5000
 CMD [ "python3", "./student_age.py" ]
+# Attention, ne pas oublier de faire un bindmount du fichier
+#student_age.json . Donc la commande du lancement du containeur sera:
+#  docker run -d --name studentlistcon -v ${PWD}/student_age.json:/data/student_age.json -p 4000:5000 studentlistimg

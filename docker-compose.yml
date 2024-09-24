@@ -16,7 +16,7 @@ services:
     networks:
       - student_network
   api:
-    image: studentlisti
+    image: studentlistimg
     volumes: 
       - ./simple_api/student_age.json:/data/student_age.json
 
